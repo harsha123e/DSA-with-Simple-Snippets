@@ -1,16 +1,15 @@
 //Stack using Arrays
 #include <iostream>
 
-#define SIZE 5
-
 using namespace std;
 
 class Stack{
   private :
-    int stack[SIZE];
-    int top;
+    int *stack,top,SIZE;
   public:
-    Stack(){
+    Stack(int size){
+        SIZE = size;
+        stack = new int[SIZE];
         top=-1;
         for(int i=0;i<SIZE;i++)
             stack[i]=-1;
@@ -77,7 +76,12 @@ class Stack{
 
 int main() {
     
-    Stack s1;
+    int size;
+    
+    cout << "Enter size of stack : ";
+    cin>>size;
+    
+    Stack s1(size);
     int value,position,option;
     
     do{
