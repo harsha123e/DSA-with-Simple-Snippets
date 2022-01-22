@@ -1,17 +1,18 @@
 //Queue using arrays
 #include <iostream>
 
-#define SIZE 5
-
 using namespace std;
 
 class Queue{
     private:
-    int front,rear,queue[SIZE];
+    int front,rear,*queue,SIZE;
     public:
-    Queue(){
+    Queue(int size){
+        SIZE = size;
         front = rear = -1;
-        for(int i=0;i<SIZE;queue[i++]=-1);
+        queue = new int[SIZE];
+        for(int i=0;i<SIZE;i++)
+            queue[i]=-1;
     }
     bool isEmpty(){
         if(front==-1 && rear==-1)
@@ -65,7 +66,12 @@ class Queue{
 
 int main() {
     
-    Queue q;
+    int size;
+    
+    cout<<"Enter size of Queue : ";
+    cin>>size;
+    
+    Queue q(size);
     int value,option;
     
     do{
