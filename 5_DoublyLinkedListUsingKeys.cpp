@@ -117,8 +117,10 @@ public:
             {
                 if (head->next == NULL)
                     head = NULL;
-                else
+                else{
                     head = head->next;
+                    head->prev=NULL;
+                }
             }
             else if (temp->next == NULL)
                 temp->prev->next = NULL;
