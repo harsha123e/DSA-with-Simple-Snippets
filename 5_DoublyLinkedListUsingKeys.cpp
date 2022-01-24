@@ -100,8 +100,8 @@ public:
                     n->next = temp->next;
                     temp->next->prev = n;
                     temp->next = n;
+                    cout << "Node added successfully\n";
                 }
-                cout << "Node added successfully\n";
             }
         }
     }
