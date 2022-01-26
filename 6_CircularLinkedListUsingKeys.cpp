@@ -210,7 +210,7 @@ int main()
         cout << "3.Insert Node after a key value\n";
         cout << "4.Delete Node using key\n";
         cout << "5.Update value using key\n";
-        cout << "6.Display Linked List\n";
+        cout << "6.Display Circular Linked List\n";
         cin >> option;
 
         Node *n = new Node();
